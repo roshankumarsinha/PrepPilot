@@ -1,0 +1,7 @@
+pnpm-lock.yaml
+**/dist
+**/coverage
+data/
+# Hand-written planning docs keep their own formatting
+docs/
+CLAUDE.md
