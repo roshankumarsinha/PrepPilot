@@ -1,0 +1,82 @@
+# Notes repos indexed by PrepPilot.
+#
+# Each repo is cloned into data/repos/<name>. A file is indexed when it matches at least
+# one `include` glob and no `exclude` glob. Globs are relative to the repo root and ignore
+# case, so `README.md` also matches `Readme.md`. Only markdown (.md), text (.txt) and code
+# (.cpp, .js) files are parsed; anything else that matches is skipped.
+#
+# Editing this file is safe: the next sync notices the change and re-checks every file.
+
+defaults:
+  branch: master
+  exclude: ['**/node_modules/**']
+
+repos:
+  - name: DSA
+    url: https://github.com/roshankumarsinha/DSA.git
+    description: DSA theory, algorithms and pattern-wise questions with solutions in C++ and JavaScript
+    topics: [dsa]
+    include: ['**']
+    # The same problems live in both folders; matching files are linked as one problem.
+    codePairs: [General-DSA-Questions, JS-DSA-Questions]
+
+  - name: Some-Important-Concepts
+    url: https://github.com/roshankumarsinha/Some-Important-Concepts.git
+    description: Important theory concepts for LLD and HLD
+    topics: [lld, hld]
+    include: ['**']
+
+  - name: namaste-frontend-system-design
+    url: https://github.com/roshankumarsinha/namaste-frontend-system-design.git
+    description: Frontend system design notes, plus backend system design and design patterns
+    topics: [frontend-system-design, system-design]
+    include:
+      - Accessibility/README.md
+      - Backend System Design/README.md
+      - CommunicationTechniques/README.md
+      - Databases&Caching/*/README.md
+      - Design Patterns/README.md
+      - Networking/README.md
+      - Networking/*/README.md
+      - Performance/**/README.md
+      - Security/README.md
+      - Security/*/README.md
+      - offline/README.md
+      - offline/README1.md
+      - LLD/app/README.md
+    exclude:
+      - Databases&Caching/normalization/**
+      - Networking/{GraphQl,gRPC}/**
+      # Default create-next-app READMEs, not notes
+      - Performance/RenderingPatterns/{app-router,page-router}/**
+      - Security/{CSRF,Permissions-policy,SRI,SecurityHeaders}/**
+
+  - name: AI-Notes
+    url: https://github.com/roshankumarsinha/AI-Notes.git
+    description: AI concepts (RAG, agents, LLMs, Claude) and interview questions
+    topics: [ai]
+    include: ['**']
+
+  - name: NodeJs
+    url: https://github.com/roshankumarsinha/NodeJs.git
+    description: How Node.js works and important Node.js interview questions
+    topics: [nodejs, backend]
+    include: [impQuestionOnNodejs.txt]
+
+  - name: NestJS
+    url: https://github.com/roshankumarsinha/NestJS.git
+    description: NestJS concepts, how it works, and deep dives
+    topics: [nestjs, backend]
+    include: ['**']
+
+  - name: Javascript
+    url: https://github.com/roshankumarsinha/Javascript.git
+    description: JavaScript concepts and important interview questions
+    topics: [javascript]
+    include: ['**']
+
+  - name: namaste-react
+    url: https://github.com/roshankumarsinha/namaste-react.git
+    description: React deep-dive notes, frontend HLD (composing components) and React machine-coding questions
+    topics: [react, frontend]
+    include: ['**']

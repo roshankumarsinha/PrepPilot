@@ -12,5 +12,5 @@
     "types": ["node", "jest"],
     "strictPropertyInitialization": false
   },
-  "include": ["src", "test", "jest.config.ts"]
+  "include": ["src", "test", "jest.config.ts", "drizzle.config.ts"]
 }

@@ -1,4 +1,4 @@
-import type { HealthResponse } from '@preppilot/shared';
+import type { DependencyHealth, HealthResponse } from '@preppilot/shared';
 import { useHealth } from '../api/useHealth';
 import { formatDuration } from '../lib/format';
 
@@ -52,7 +52,6 @@ export function HealthCard() {
 }
 
 function HealthDetails({ health }: { health: HealthResponse }) {
-  const dbUp = health.db.status === 'up';
   return (
     <>
       <p className="mb-4 text-2xl font-semibold" data-testid="overall-status">
@@ -60,16 +59,24 @@ function HealthDetails({ health }: { health: HealthResponse }) {
       </p>
       <dl className="divide-y divide-slate-200 dark:divide-slate-800">
         <StatusRow label="API" tone="good" value="Up" />
-        <StatusRow
-          label="Database"
-          tone={dbUp ? 'good' : 'bad'}
-          value={dbUp ? `Up · ${health.db.latencyMs} ms` : 'Down'}
-          detail={health.db.error}
-        />
+        <DependencyRow label="Database" health={health.db} />
+        <DependencyRow label="Embeddings (Ollama)" health={health.ollama} />
         <StatusRow label="API uptime" value={formatDuration(health.uptimeSeconds)} />
         <StatusRow label="Checked at" value={new Date(health.timestamp).toLocaleTimeString()} />
       </dl>
     </>
+  );
+}
+
+function DependencyRow({ label, health }: { label: string; health: DependencyHealth }) {
+  const up = health.status === 'up';
+  return (
+    <StatusRow
+      label={label}
+      tone={up ? 'good' : 'bad'}
+      value={up ? `Up · ${health.latencyMs} ms` : 'Down'}
+      detail={health.error}
+    />
   );
 }
 
