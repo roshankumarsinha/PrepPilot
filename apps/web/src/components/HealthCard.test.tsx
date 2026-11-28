@@ -21,6 +21,8 @@ describe('HealthCard', () => {
 
     expect(await screen.findByText('All systems operational')).toBeInTheDocument();
     expect(screen.getByText('Up · 3 ms')).toBeInTheDocument();
+    expect(screen.getByText('Embeddings (Ollama)')).toBeInTheDocument();
+    expect(screen.getByText('Up · 8 ms')).toBeInTheDocument();
     expect(screen.getByText('2m 5s')).toBeInTheDocument();
   });
 
@@ -32,6 +34,19 @@ describe('HealthCard', () => {
     expect(await screen.findByTestId('overall-status')).toHaveTextContent('Degraded');
     expect(screen.getByText('Down')).toBeInTheDocument();
     expect(screen.getByText('connect ECONNREFUSED 127.0.0.1:5432')).toBeInTheDocument();
+  });
+
+  it('shows how to fix a missing embedding model', async () => {
+    const missingModel = {
+      ...healthyResponse,
+      status: 'degraded' as const,
+      ollama: { status: 'down' as const, latencyMs: 4, error: 'run: ollama pull nomic-embed-text' },
+    };
+    vi.spyOn(globalThis, 'fetch').mockResolvedValue(jsonResponse(missingModel, 503));
+
+    renderWithQueryClient(<HealthCard />);
+
+    expect(await screen.findByText('run: ollama pull nomic-embed-text')).toBeInTheDocument();
   });
 
   it('shows the API as unreachable when the request fails', async () => {

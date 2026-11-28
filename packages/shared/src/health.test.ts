@@ -4,6 +4,7 @@ import { HealthResponseSchema, type HealthResponse } from './health.js';
 const healthy: HealthResponse = {
   status: 'ok',
   db: { status: 'up', latencyMs: 2 },
+  ollama: { status: 'up', latencyMs: 5 },
   uptimeSeconds: 12,
   timestamp: '2026-11-27T10:00:00.000Z',
 };

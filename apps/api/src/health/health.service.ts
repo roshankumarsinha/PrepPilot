@@ -1,35 +1,46 @@
-import { Injectable, Logger } from '@nestjs/common';
-import type { DatabaseHealth, HealthResponse } from '@preppilot/shared';
+import { Inject, Injectable, Logger } from '@nestjs/common';
+import type { DependencyHealth, HealthResponse } from '@preppilot/shared';
 import { DatabaseService } from '../database/database.service';
+import { EMBEDDING_PROVIDER, type EmbeddingProvider } from '../embeddings/embedding.provider';
 import { withTimeout } from './with-timeout';
 
-export const DB_PING_TIMEOUT_MS = 2_000;
+export const PROBE_TIMEOUT_MS = 2_000;
 
 @Injectable()
 export class HealthService {
   private readonly logger = new Logger(HealthService.name);
 
-  constructor(private readonly database: DatabaseService) {}
+  constructor(
+    private readonly database: DatabaseService,
+    @Inject(EMBEDDING_PROVIDER) private readonly embedder: EmbeddingProvider,
+  ) {}
 
   async check(): Promise<HealthResponse> {
-    const db = await this.checkDatabase();
+    const [db, ollama] = await Promise.all([
+      this.probe('Database', () => this.database.ping()),
+      this.probe('Ollama', async () => {
+        const { available, error } = await this.embedder.checkAvailability();
+        if (!available) throw new Error(error ?? 'Ollama is unavailable');
+      }),
+    ]);
     return {
-      status: db.status === 'up' ? 'ok' : 'degraded',
+      status: db.status === 'up' && ollama.status === 'up' ? 'ok' : 'degraded',
       db,
+      ollama,
       uptimeSeconds: Math.round(process.uptime()),
       timestamp: new Date().toISOString(),
     };
   }
 
-  private async checkDatabase(): Promise<DatabaseHealth> {
+  private async probe(name: string, check: () => Promise<void>): Promise<DependencyHealth> {
     const startedAt = performance.now();
     const elapsed = () => Math.round(performance.now() - startedAt);
     try {
-      await withTimeout(this.database.ping(), DB_PING_TIMEOUT_MS);
+      await withTimeout(check(), PROBE_TIMEOUT_MS);
       return { status: 'up', latencyMs: elapsed() };
     } catch (error) {
       const message = describeError(error);
-      this.logger.warn(`Database health check failed: ${message}`);
+      this.logger.warn(`${name} health check failed: ${message}`);
       return { status: 'down', latencyMs: elapsed(), error: message };
     }
   }

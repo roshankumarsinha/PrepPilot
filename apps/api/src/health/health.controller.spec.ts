@@ -8,6 +8,7 @@ function makeResult(status: HealthResponse['status']): HealthResponse {
   return {
     status,
     db: { status: status === 'ok' ? 'up' : 'down', latencyMs: 1 },
+    ollama: { status: 'up', latencyMs: 1 },
     uptimeSeconds: 1,
     timestamp: new Date().toISOString(),
   };
