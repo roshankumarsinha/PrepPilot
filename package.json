@@ -11,6 +11,8 @@
   "scripts": {
     "dev": "pnpm --parallel --filter @preppilot/shared --filter @preppilot/api --filter @preppilot/web dev",
     "build": "pnpm -r build",
+    "db:migrate": "pnpm --filter @preppilot/api db:migrate",
+    "sync": "pnpm --filter @preppilot/api sync",
     "typecheck": "pnpm -r typecheck",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",

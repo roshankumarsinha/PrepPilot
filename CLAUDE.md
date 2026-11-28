@@ -59,5 +59,7 @@ calling a phase finished.
 
 - `docker compose up -d` — start Postgres + pgvector
 - `pnpm install` — install all workspaces
+- `pnpm db:migrate` — apply database migrations
+- `pnpm sync [repo]` — sync the notes repos in `repos.yaml` now (needs Ollama running)
 - `pnpm dev` — run api + web together
 - `pnpm lint` / `pnpm test` — lint and test everything
