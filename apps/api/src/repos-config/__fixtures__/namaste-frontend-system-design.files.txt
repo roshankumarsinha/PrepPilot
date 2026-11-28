@@ -1,0 +1,290 @@
+.gitignore
+Accessibility/README.md
+Accessibility/example1/withA11y.html
+Accessibility/example1/withoutA11y.html
+Accessibility/example2.html
+Accessibility/example3.html
+Accessibility/example4.html
+Accessibility/example5.html
+Accessibility/example6.html
+Accessibility/example7/withoutA11y.html
+Accessibility/example8/withA11yI.html
+Accessibility/example8/withoutA11y.html
+Backend System Design/Readme.md
+CommunicationTechniques/README.md
+CommunicationTechniques/longPolling/index.html
+CommunicationTechniques/longPolling/index.js
+CommunicationTechniques/longPolling/package-lock.json
+CommunicationTechniques/longPolling/package.json
+CommunicationTechniques/shortPolling/index.html
+CommunicationTechniques/shortPolling/index.js
+CommunicationTechniques/shortPolling/package-lock.json
+CommunicationTechniques/shortPolling/package.json
+CommunicationTechniques/sse/index.html
+CommunicationTechniques/sse/index.js
+CommunicationTechniques/sse/package-lock.json
+CommunicationTechniques/sse/package.json
+CommunicationTechniques/webSocket/index.html
+CommunicationTechniques/webSocket/index.js
+CommunicationTechniques/webSocket/package-lock.json
+CommunicationTechniques/webSocket/package.json
+CommunicationTechniques/webhooks/index.js
+CommunicationTechniques/webhooks/package.json
+Databases&Caching/API Caching/README.md
+Databases&Caching/Database & Caching Overview/README.md
+Databases&Caching/cookieStorage/README.md
+Databases&Caching/cookieStorage/index.js
+Databases&Caching/cookieStorage/package-lock.json
+Databases&Caching/cookieStorage/package.json
+Databases&Caching/cookieStorage/public/index.html
+Databases&Caching/cookieStorage/public/script.js
+Databases&Caching/cookieStorage/public/style.css
+Databases&Caching/httpCaching/README.md
+Databases&Caching/httpCaching/index.js
+Databases&Caching/httpCaching/package-lock.json
+Databases&Caching/httpCaching/package.json
+Databases&Caching/httpCaching/public/image.gif
+Databases&Caching/httpCaching/public/index.html
+Databases&Caching/indexedDb/README.md
+Databases&Caching/indexedDb/index.html
+Databases&Caching/localStorage/README.md
+Databases&Caching/localStorage/index.html
+Databases&Caching/normalization/data1.js
+Databases&Caching/normalization/data2.js
+Databases&Caching/normalization/normalized1.js
+Databases&Caching/serviceWorker/README.md
+Databases&Caching/serviceWorker/index.js
+Databases&Caching/serviceWorker/package-lock.json
+Databases&Caching/serviceWorker/package.json
+Databases&Caching/serviceWorker/public/app.js
+Databases&Caching/serviceWorker/public/image.gif
+Databases&Caching/serviceWorker/public/index.html
+Databases&Caching/serviceWorker/public/styles.css
+Databases&Caching/serviceWorker/public/sw.js
+Databases&Caching/sessionStorage/README.md
+Databases&Caching/sessionStorage/index.html
+Design Patterns/Readme.md
+HLD/AnalyticsDashboard/example1/index.html
+HLD/AnalyticsDashboard/example2/replay.html
+HLD/AnalyticsDashboard/example2/webpage.html
+HLD/AnalyticsDashboard/example3/chartjs.html
+HLD/AnalyticsDashboard/example3/d3js.html
+HLD/CricInfo/Carousel.html
+HLD/Deep Dive of HLD/Piyush Garg Video 1.md
+HLD/Deep Dive of HLD/Piyush Garg Video 12 Gossip Protocol.md
+HLD/Deep Dive of HLD/Piyush Garg Video 2.md
+HLD/Deep Dive of HLD/Piyush Garg Video 3 Event Sourcing & CQRS Design Pattern.md
+HLD/Deep Dive of HLD/Piyush Garg Video 4 Back of Envelope Estimation.md
+HLD/Deep Dive of HLD/Piyush Garg Video 5 Rate Limiting.md
+HLD/Deep Dive of HLD/Piyush Garg Video 6 Consistent Hashing.md
+HLD/Deep Dive of HLD/Piyush Garg Video 7 Message Queue.md
+HLD/DrawingTools/example1/canvas.html
+HLD/DrawingTools/example1/svg.html
+HLD/DrawingTools/example2/index.html
+HLD/DrawingTools/example3/index.html
+HLD/DrawingTools/example4/index.html
+HLD/E-commerce/README.md
+HLD/MusicStreaming/example1/index.html
+HLD/MusicStreaming/example1/script.js
+HLD/MusicStreaming/example2/index.html
+HLD/MusicStreaming/example2/script.js
+HLD/Netflix/videoPlayer.html
+HLD/News Feed/README.md
+HLD/PhotoSharing/README.md
+HLD/PhotoSharing/fileUploadBase64.html
+HLD/PhotoSharing/fileUploadMultipart.html
+HLD/PhotoSharing/fileUploadinChunks.html
+HLD/PhotoSharing/imageEditing.html
+LLD/app/.gitignore
+LLD/app/README.md
+LLD/app/package-lock.json
+LLD/app/package.json
+LLD/app/public/favicon.ico
+LLD/app/public/index.html
+LLD/app/public/logo192.png
+LLD/app/public/logo512.png
+LLD/app/public/manifest.json
+LLD/app/public/robots.txt
+LLD/app/src/App.css
+LLD/app/src/App.js
+LLD/app/src/App.test.js
+LLD/app/src/components/About.js
+LLD/app/src/components/InfiniteScroll.js
+LLD/app/src/components/Login.js
+LLD/app/src/components/MemeCard.js
+LLD/app/src/components/ProtectedRoute.js
+LLD/app/src/components/Shimmer.js
+LLD/app/src/components/Team.js
+LLD/app/src/components/accordian/Accordion.js
+LLD/app/src/components/accordian/AccordionItem.js
+LLD/app/src/components/comments/CommentBox.js
+LLD/app/src/components/comments/Comments.js
+LLD/app/src/components/image-slider/ImageSlider.js
+LLD/app/src/components/live-chat/ChatMessage.js
+LLD/app/src/components/live-chat/ChatWindow.js
+LLD/app/src/components/live-chat/Live Chat.js
+LLD/app/src/components/live-chat/VideoStream.js
+LLD/app/src/components/pagination/Pagination.js
+LLD/app/src/components/pagination/ProductCard.js
+LLD/app/src/components/search-ui/SearchUi.js
+LLD/app/src/index.css
+LLD/app/src/index.js
+LLD/app/src/logo.svg
+LLD/app/src/reportWebVitals.js
+LLD/app/src/setupTests.js
+LLD/app/src/utils/langConstant.js
+LLD/app/tailwind.config.js
+Networking/Communication Protocols/README.md
+Networking/GraphQl/README.md
+Networking/GraphQl/index.js
+Networking/GraphQl/package-lock.json
+Networking/GraphQl/package.json
+Networking/GraphQl/resolvers.js
+Networking/GraphQl/typeDefs.js
+Networking/How Web Works/README.md
+Networking/README.md
+Networking/RestApi/README.md
+Networking/RestApi/index.js
+Networking/RestApi/package-lock.json
+Networking/RestApi/package.json
+Networking/gRPC/client/client.js
+Networking/gRPC/client/index.js
+Networking/gRPC/customers.proto
+Networking/gRPC/package-lock.json
+Networking/gRPC/package.json
+Networking/gRPC/server/index.js
+Performance/Build Optimization/README.md
+Performance/Network Optimization/README.md
+Performance/Network Optimization/example1/crp.html
+Performance/Network Optimization/example2/Product1.png
+Performance/Network Optimization/example2/Product2.png
+Performance/Network Optimization/example2/Product3.png
+Performance/Network Optimization/example2/Product4.png
+Performance/Network Optimization/example2/index.css
+Performance/Network Optimization/example2/index.html
+Performance/Network Optimization/example2/index.js
+Performance/Network Optimization/example3/index.css
+Performance/Network Optimization/example3/index.html
+Performance/Network Optimization/example3/index.js
+Performance/Network Optimization/example4/cert/server.cert
+Performance/Network Optimization/example4/cert/server.key
+Performance/Network Optimization/example4/index.js
+Performance/Network Optimization/example4/package-lock.json
+Performance/Network Optimization/example4/package.json
+Performance/Network Optimization/example4/public/img1.jpg
+Performance/Network Optimization/example4/public/img2.jpg
+Performance/Network Optimization/example4/public/img3.jpg
+Performance/Network Optimization/example4/public/img4.webp
+Performance/Network Optimization/example4/public/img5.jpg
+Performance/Network Optimization/example4/public/img6.webp
+Performance/Network Optimization/example4/public/img7.jpg
+Performance/Network Optimization/example4/public/img8.jpg
+Performance/Network Optimization/example4/public/img9.jpg
+Performance/Network Optimization/example4/public/index.html
+Performance/Network Optimization/example4/scripts/generate-cert.sh
+Performance/Network Optimization/index.html
+Performance/Performace Monitoring/README.md
+Performance/README.md
+Performance/RenderingPatterns/README.md
+Performance/RenderingPatterns/app-router/.eslintrc.json
+Performance/RenderingPatterns/app-router/.gitignore
+Performance/RenderingPatterns/app-router/README.md
+Performance/RenderingPatterns/app-router/data/db.json
+Performance/RenderingPatterns/app-router/jsconfig.json
+Performance/RenderingPatterns/app-router/next.config.js
+Performance/RenderingPatterns/app-router/package-lock.json
+Performance/RenderingPatterns/app-router/package.json
+Performance/RenderingPatterns/app-router/postcss.config.js
+Performance/RenderingPatterns/app-router/public/next.svg
+Performance/RenderingPatterns/app-router/public/vercel.svg
+Performance/RenderingPatterns/app-router/src/app/favicon.ico
+Performance/RenderingPatterns/app-router/src/app/globals.css
+Performance/RenderingPatterns/app-router/src/app/layout.js
+Performance/RenderingPatterns/app-router/src/app/loading.jsx
+Performance/RenderingPatterns/app-router/src/app/page.js
+Performance/RenderingPatterns/app-router/src/app/rsc-page/page.js
+Performance/RenderingPatterns/app-router/src/app/tutorial.js
+Performance/RenderingPatterns/app-router/tailwind.config.js
+Performance/RenderingPatterns/app-router/tsconfig.json
+Performance/RenderingPatterns/page-router/.eslintrc.json
+Performance/RenderingPatterns/page-router/.gitignore
+Performance/RenderingPatterns/page-router/README.md
+Performance/RenderingPatterns/page-router/data/db.json
+Performance/RenderingPatterns/page-router/jsconfig.json
+Performance/RenderingPatterns/page-router/next.config.js
+Performance/RenderingPatterns/page-router/package-lock.json
+Performance/RenderingPatterns/page-router/package.json
+Performance/RenderingPatterns/page-router/postcss.config.js
+Performance/RenderingPatterns/page-router/public/favicon.ico
+Performance/RenderingPatterns/page-router/public/next.svg
+Performance/RenderingPatterns/page-router/public/vercel.svg
+Performance/RenderingPatterns/page-router/src/pages/_app.js
+Performance/RenderingPatterns/page-router/src/pages/_document.js
+Performance/RenderingPatterns/page-router/src/pages/api/hello.js
+Performance/RenderingPatterns/page-router/src/pages/csr-page.js
+Performance/RenderingPatterns/page-router/src/pages/index.js
+Performance/RenderingPatterns/page-router/src/pages/ssg-page.js
+Performance/RenderingPatterns/page-router/src/pages/ssr-page.js
+Performance/RenderingPatterns/page-router/src/styles/globals.css
+Performance/RenderingPatterns/page-router/tailwind.config.js
+README.md
+Security/CORS/README.md
+Security/CORS/client/index.html
+Security/CORS/server/index.js
+Security/CORS/server/package-lock.json
+Security/CORS/server/package.json
+Security/CSRF/mitigation/anit-csrf.js
+Security/CSRF/mitigation/package-lock.json
+Security/CSRF/mitigation/package.json
+Security/CSRF/mitigation/referer.js
+Security/CSRF/vulnerability/example1.html
+Security/CSRF/vulnerability/example2.html
+Security/Client Side Security/README.md
+Security/Dependency Security/README.md
+Security/IframeProtection/README.md
+Security/IframeProtection/package-lock.json
+Security/IframeProtection/package.json
+Security/IframeProtection/server1/index.js
+Security/IframeProtection/server1/public/example1.html
+Security/IframeProtection/server1/public/example2.html
+Security/IframeProtection/server1/public/example3.html
+Security/IframeProtection/server2/index.js
+Security/IframeProtection/server2/public/iframe-webiste1.html
+Security/IframeProtection/server2/public/iframe-webiste2.html
+Security/Input Validation and Sanitization/README.md
+Security/Permissions-policy/index.js
+Security/Permissions-policy/package-lock.json
+Security/Permissions-policy/package.json
+Security/README.md
+Security/SRI/index.html
+Security/SecurityHeaders/index.js
+Security/SecurityHeaders/package-lock.json
+Security/SecurityHeaders/package.json
+Security/XSS/README.md
+Security/XSS/mitigation/index.js
+Security/XSS/mitigation/package-lock.json
+Security/XSS/mitigation/package.json
+Security/XSS/mitigation/public/index.html
+Security/XSS/vulnerability/example1.html
+Security/XSS/vulnerability/example2.html
+Security/XSS/vulnerability/example3.html
+Security/XSS/vulnerability/example4.html
+Security/XSS/vulnerability/example5.html
+Security/XSS/vulnerability/example6.html
+offline/README.md
+offline/README1.md
+offline/demo/icon512_maskable.png
+offline/demo/icon512_rounded.png
+offline/demo/index.html
+offline/demo/manifest.json
+offline/demo/photo.png
+offline/demo/script.js
+offline/demo/style.css
+offline/demo/sw.js
+testing/app.js
+testing/app.test.js
+testing/e2e.js
+testing/package-lock.json
+testing/package.json
+testing/tdd.js
+testing/tdd.test.js
