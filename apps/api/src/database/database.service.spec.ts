@@ -1,4 +1,5 @@
 import { Logger } from '@nestjs/common';
+import { testEnv } from '../testing/test-env';
 import { DatabaseService } from './database.service';
 
 describe('DatabaseService', () => {
@@ -7,11 +8,7 @@ describe('DatabaseService', () => {
   beforeEach(() => {
     jest.spyOn(Logger.prototype, 'warn').mockImplementation(() => undefined);
     // The pool connects lazily, so no database is needed to construct the service.
-    service = new DatabaseService({
-      NODE_ENV: 'test',
-      PORT: 3000,
-      DATABASE_URL: 'postgres://user:pass@localhost:5432/db',
-    });
+    service = new DatabaseService(testEnv());
   });
 
   afterEach(async () => {
